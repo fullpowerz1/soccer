@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
-  root to: "homes#top"
   devise_for :users
-
-  resources :post_images, only: [:new, :index, :show, :create, :destroy]
-
+  root to: "homes#top"
   get 'homes/about' => 'homes#about',as: 'about'
+
+  # resourcesの記述
+  resources :post_images, only: [:new, :index, :show, :create, :destroy]
+  resources :users, only: [:show, :edit]
   # 徐々に加えていく。
 end
