@@ -5,6 +5,6 @@ Rails.application.routes.draw do
 
   # resourcesの記述
   resources :post_images, only: [:new, :index, :show, :create, :destroy]
-  resources :users, only: [:show, :edit]
+  resources :users, only: [:show, :edit, :update]
   # 徐々に加えていく。
 end
