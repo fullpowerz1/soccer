@@ -7,7 +7,7 @@
     <% end %>
 
     <p>投稿ユーザー画像:
-      <%= image_tag 'sample-author1.jpg' %>
+      <%= image_tag post_image.user.get_profile_image(100,100) %>
     </p>
 
     <p>ショップ名:
