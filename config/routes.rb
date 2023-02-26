@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   # resourcesの記述
   resources :post_images, only: [:new, :index, :show, :create, :destroy] do
+    resource :favorites, only: [:create, :destroy]
     resources :post_comments, only: [:create, :destroy]
   end
   resources :users, only: [:show, :edit, :update]
