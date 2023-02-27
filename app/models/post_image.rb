@@ -5,6 +5,10 @@ class PostImage < ApplicationRecord
   has_many :post_comments, dependent: :destroy
   has_many :favorites, dependent: :destroy
 
+  # バリデーション
+  validates :shop_name, presence: true
+  validates :image, presence: true
+
   # 特定の処理を名前で呼び出すメソッド
   def get_image
     unless image.attached?
